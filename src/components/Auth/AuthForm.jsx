@@ -102,8 +102,6 @@ const AuthForm = () => {
     } else {
       dispatch(authActions.logUserIn({ authToken: authId }));
       message = <Message className="success">Logged In!</Message>;
-
-      // <Redirect to="/profile" />;
     }
   }
 
