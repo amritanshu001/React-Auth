@@ -25,6 +25,11 @@
   background-color: #f7f0fa;
 }
 
+.error {
+  background-color: #d8a9a9;
+  border: 1px solid #d98f8f;
+}
+
 .action {
   margin-top: 1.5rem;
 }
@@ -42,4 +47,16 @@
 .action button:hover {
   background-color: #540d83;
   border-color: #540d83;
+}
+
+.action button:disabled {
+  background-color: #aeaeae;
+  border-color: #b0b0b0;
+  cursor: not-allowed;
+}
+
+.action button:disabled:hover {
+  background-color: #aeaeae;
+  border-color: #b0b0b0;
+  cursor: not-allowed;
 }

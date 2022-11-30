@@ -4,6 +4,11 @@ const useInputValidator = (inputValidator) => {
   const [value, setValue] = useState("");
   const [isTouched, setIsTouched] = useState(false);
 
+  const resetInput = () => {
+    setValue("");
+    setIsTouched(false);
+  };
+
   const inputBlurHandler = () => {
     setIsTouched(true);
   };
@@ -22,6 +27,7 @@ const useInputValidator = (inputValidator) => {
     isError,
     inputBlurHandler,
     inputChangeHandler,
+    resetInput,
   };
 };
 

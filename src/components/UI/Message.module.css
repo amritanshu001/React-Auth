@@ -1,0 +1,14 @@
+.message {
+  text-align: center;
+  margin: 0;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  height: 3rem;
+  vertical-align: center;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.message p {
+  font-weight: bold;
+}
