@@ -100,7 +100,6 @@ const AuthForm = () => {
         <Message className="success">{`Done! Id ${localId} created`}</Message>
       );
     } else {
-      dispatch(authActions.logUserIn({ authToken: authId }));
       message = <Message className="success">Logged In!</Message>;
     }
   }
@@ -126,7 +125,13 @@ const AuthForm = () => {
     return () => {
       clearTimeout(setTimer);
     };
-  }, [signUpError, message]);
+  }, [signUpError]);
+
+  useEffect(() => {
+    if (!signUpError && !signUpLoading && authId) {
+      dispatch(authActions.logUserIn({ authToken: authId }));
+    }
+  }, [signUpError, signUpLoading, authId, authActions]);
 
   return (
     <section className={classes.auth}>
